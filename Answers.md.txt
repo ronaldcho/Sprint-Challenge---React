@@ -1,0 +1,44 @@
+1. What is React JS? How does it differ from other JavaScript Frameworks?
+
+React is a library for creating user interfaces. It's focused on the view, display dynamic data and how an interface hooks connects to those other elements. Working with components instead of MVC. Only one-way data flow.
+ 
+2.	Explain briefly the React Component Lifecycle. Name three of the methods that are a part of the lifecycle and what they do.
+React component lifecycle phases are:
+ 1.	initialization
+ 2.	Mounting
+ 3.	Updating
+ 4.	Unmounting
+
+Initialization
+The initialization phase is where we define defaults and initial values for this.props and this.state by implementing getDefaultProps() and getInitialState() respectively.
+Mounting
+Mounting is the process that occurs when a component is being inserted into the DOM. This phase has two methods that we can hook up with: componentWillMount() and componentDidMount().
+Updating
+There are also methods that will allow us to execute code relative to when a component’s state or properties get updated. componentWillReceiveProps(), shouldComponentUpdate(), render(), componentDidUpdate()
+Unmounting
+In this phase React provide us with only one method:
+componentWillUnmount()
+It is called immediately before the component is unmounted from the DOM. We can use it to perform any cleanup we might need
+
+ 3.	Briefly describe some of the differences between a  Class/Stateful component  and a  Functional/Presentational component.
+
+ Functional/Presentational  components:
+Are concerned with  how things look. Receive data and callback exclusively via props also written as functional components and rarely have their own state. example, page, sidebar, userinfo, list.
+Class/Stateful component:
+Are concerned with  how things work. provide the data and behavior to presentational or other class components.  call flux actions and provide these as callbacks to the presentational components. Container.create(), connect(). example, userpage, followed user list.
+
+ 4.	Name the three arguments that are passed into the  React.createElement()  function?
+
+React.createElement(type,props, children)  
+type (string |  React.createClass()):
+Can be a string which represents an HTML element (or custom HTML element) or React component instance (i.e., an instance of  React.createClass())
++
+props (null | object):
+Can be  null  or an object containing attributes/props and values
+children (null | string |  React.createClass()  |  React.createElement()):
+Children can be  null, a string that gets turned into a text node, an instance of  React.createClass()  or  React.createElement()
+
+
+
+
+
